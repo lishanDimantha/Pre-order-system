@@ -152,17 +152,90 @@ section.cat + section.cat{border-top:1px dashed var(--line);}
   gap:34px 22px;
 }
 
-.card{text-align:center;}
+.card{
+  position:relative;
+  min-height:236px;
+  perspective:1200px;
+  text-align:center;
+}
+.card-inner{
+  position:relative;
+  width:100%;
+  min-height:236px;
+  transform-style:preserve-3d;
+  transition:transform .7s cubic-bezier(.2,.75,.25,1);
+}
+.card:hover .card-inner,
+.card:focus-visible .card-inner{
+  transform:rotateY(180deg);
+}
+.card-front,
+.card-back{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  min-height:236px;
+  padding:10px 8px 14px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:rgba(251,247,238,0.92);
+  box-shadow:0 12px 26px -20px rgba(74,46,23,0.8);
+  backface-visibility:hidden;
+  transform-style:preserve-3d;
+}
+.card-front > *{transform:translateZ(28px);}
+.card-back{
+  justify-content:center;
+  gap:10px;
+  padding:20px;
+  transform:rotateY(180deg);
+  background:linear-gradient(145deg, var(--cream-light), rgba(196,118,42,0.16));
+}
+.card-back h3{
+  max-width:150px;
+  margin:0;
+  color:var(--ink);
+  font-family:'Fredoka', sans-serif;
+  font-size:1.15rem;
+  line-height:1.2;
+  transform:translateZ(48px);
+}
+.back-label,
+.back-action{
+  margin:0;
+  color:var(--ink-soft);
+  font-size:0.72rem;
+  font-weight:700;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+}
+.back-label{color:var(--rust); transform:translateZ(36px);}
+.back-action{transform:translateZ(28px);}
+.back-price{
+  display:grid;
+  place-items:center;
+  width:58px;
+  height:58px;
+  border:3px solid var(--cream);
+  border-radius:50%;
+  background:var(--rust);
+  color:#fff;
+  font-family:'Fredoka', sans-serif;
+  font-size:0.82rem;
+  font-weight:600;
+  box-shadow:0 8px 16px -8px rgba(164,90,20,0.7);
+  transform:translateZ(60px);
+}
 .card[data-recipe]{
   cursor:pointer;
-  border-radius:16px;
-  padding:6px;
-  transition: background .15s ease;
+  outline:none;
 }
 .card[data-recipe]:hover,
 .card[data-recipe]:focus-visible{
-  background: rgba(196,118,42,0.10);
-  outline:none;
+  background:transparent;
 }
 .art{
   position:relative;
@@ -180,6 +253,7 @@ section.cat + section.cat{border-top:1px dashed var(--line);}
   display:block;
 }
 .photo img.missing{display:none;}
+.card-front .art{transform:translateZ(50px);}
 .badge{
   position:absolute;
   bottom:-6px; right:-6px;

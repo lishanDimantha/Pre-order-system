@@ -38,6 +38,29 @@ function onScroll(){
 window.addEventListener('scroll', onScroll, {passive:true});
 onScroll();
 
+document.querySelectorAll('.card').forEach((card) => {
+  const inner = document.createElement('div');
+  const front = document.createElement('div');
+  const back = document.createElement('div');
+  const name = card.querySelector('.name')?.textContent.trim() || 'Menu item';
+  const price = card.querySelector('.badge')?.textContent.trim() || '';
+  const action = card.dataset.recipe ? 'View recipe' : 'Enjoy this favorite';
+
+  inner.className = 'card-inner';
+  front.className = 'card-front';
+  back.className = 'card-back';
+  back.innerHTML = `
+    <p class="back-label">${card.dataset.recipe ? 'Featured dish' : 'Festival favorite'}</p>
+    <h3>${name.replace(/\n/g, ' ')}</h3>
+    ${price ? `<span class="back-price">${price}</span>` : ''}
+    <p class="back-action">${action}</p>
+  `;
+
+  while (card.firstChild) front.appendChild(card.firstChild);
+  inner.append(front, back);
+  card.appendChild(inner);
+});
+
 /* ---------------- Recipe data ---------------- */
 const RECIPES = {
   'irigu-bath': {
