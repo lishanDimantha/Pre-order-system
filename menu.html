@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Our Menu — International Food Festival</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<img src="images/top.png" alt="Festival banner" class="top-banner" onerror="this.style.display='none'">
+
+<div class="hero">
+  <p class="eyebrow">International Food Festival</p>
+  <h1 class="title">Our Menu</h1>
+  <p class="subtitle">Sinhala, Tamil &amp; German kitchens, plus mocktails to wash it all down.</p>
+</div>
+
+<div class="tabbar-wrap">
+  <nav class="tabbar" id="tabbar">
+    <a href="#sinhala" class="active">Sinhala Foods</a>
+    <a href="#tamil">Tamil Foods</a>
+    <a href="#german">German Foods</a>
+    <a href="#mocktails">Mocktails</a>
+  </nav>
+</div>
+
+<main>
+
+  <section class="cat" id="sinhala">
+    <div class="cat-head"><h2>Sinhala Foods</h2><span class="count">1 item</span></div>
+    <div class="grid">
+      <div class="card" data-recipe="irigu-bath" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="art"><div class="photo"><img src="images/irigu-bath-lunu-miris.jpeg" alt="Irigu Bath & Lunu Miris" data-label="Irigu Bath & Lunu Miris" onerror="this.style.display='none'"></div><span class="badge">Rs.80</span></div>
+        <p class="name">Irigu Bath &amp;<br>Lunu Miris</p>
+        <p class="recipe-hint">View recipe</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cat" id="tamil">
+    <div class="cat-head"><h2>Tamil Foods</h2><span class="count">2 items</span></div>
+    <div class="grid">
+      <div class="card" data-recipe="thosai-sambar" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="art"><div class="photo"><img src="images/thosai-sambar.jpeg" alt="Thosai &amp; Sambar" data-label="Thosai &amp; Sambar"></div><span class="badge">Rs.80</span></div>
+        <p class="name">Thosai &amp; Sambar</p>
+        <p class="recipe-hint">View recipe</p>
+      </div>
+      <div class="card" data-recipe="watalappan" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="art"><div class="photo"><img src="images/watalappan.jpeg" alt="Watalappan" data-label="Watalappan"></div><span class="badge">Rs.130</span></div>
+        <p class="name">Watalappan</p>
+        <p class="recipe-hint">View recipe</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cat" id="german">
+    <div class="cat-head"><h2>German Foods</h2><span class="count">6 items</span></div>
+    <div class="grid">
+      <div class="card">
+        <div class="art"><div class="photo"><img src="images/bread-sugar-cake.jpeg" alt="Bread & Sugar Cake" data-label="Bread & Sugar Cake"></div><span class="badge">Rs.60</span></div>
+        <p class="name">Bread &amp; Sugar Cake</p>
+      </div>
+      <div class="card" data-recipe="sausage-board" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="art"><div class="photo"><img alt="Sausage Board" data-label="Sausage Board"></div><span class="badge">Rs.60</span></div>
+        <p class="name">Sausage Board</p>
+        <p class="recipe-hint">View recipe</p>
+      </div>
+      <div class="card" data-recipe="potato-pancake" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="art"><div class="photo"><img alt="Potato Pancake" data-label="Potato Pancake"></div><span class="badge">Rs.60</span></div>
+        <p class="name">Potato Pancake</p>
+        <p class="recipe-hint">View recipe</p>
+      </div>
+      <div class="card">
+        <div class="art"><div class="photo"><img alt="Potato Salad" data-label="Potato Salad"></div><span class="badge">Rs.60</span></div>
+        <p class="name">Potato Salad</p>
+      </div>
+      <div class="card" data-recipe="potato-chips" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="art"><div class="photo"><img src="images/potato-chips.jpeg" alt="Potato Chips" data-label="Potato Chips"></div><span class="badge">Rs.60</span></div>
+        <p class="name">Potato Chips</p>
+        <p class="recipe-hint">View recipe</p>
+      </div>
+      <div class="card" data-recipe="banana-cake" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="art"><div class="photo"><img alt="Banana Cake" data-label="Banana Cake"></div><span class="badge">Rs.180</span></div>
+        <p class="name">Banana Cake</p>
+        <p class="recipe-hint">View recipe</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cat" id="mocktails">
+    <div class="cat-head"><h2>Mocktails</h2><span class="count">3 items</span></div>
+    <div class="grid">
+      <div class="card">
+        <div class="art"><div class="photo"><img src="images/watermelon-lemonade.jpeg" alt="Watermelon Lemonade" data-label="Watermelon Lemonade"></div><span class="badge">Rs.130</span></div>
+        <p class="name">Watermelon<br>Lemonade</p>
+      </div>
+      <div class="card">
+        <div class="art"><div class="photo"><img src="images/pineapple-mint-fizz.jpeg" alt="Pineapple Mint Fizz" data-label="Pineapple Mint Fizz"></div><span class="badge">Rs.160</span></div>
+        <p class="name">Pineapple<br>Mint Fizz</p>
+      </div>
+      <div class="card">
+        <div class="art"><div class="photo"><img src="images/virgin-mojito.jpeg" alt="Virgin Mojito" data-label="Virgin Mojito"></div><span class="badge">Rs.160</span></div>
+        <p class="name">Virgin Mojito</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Thank· <span class="mark">You</span>
+</footer>
+
+<div class="modal-overlay" id="recipe-modal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" aria-label="Close recipe">&times;</button>
+    <h3 id="modal-title"></h3>
+    <div class="modal-section">
+      <h4>Ingredients</h4>
+      <ul id="modal-ingredients"></ul>
+    </div>
+    <div class="modal-section">
+      <h4>How to Prepare</h4>
+      <ol id="modal-steps"></ol>
+    </div>
+    <div class="modal-section">
+      <h4>Benefits</h4>
+      <ul id="modal-benefits"></ul>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
